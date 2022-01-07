@@ -22,7 +22,7 @@ services:
   ## Convergence cluster.
   ##
   cluster-seed:
-    image: ${CONVERGENCE_DOCKER_REPO}/convergence-cluster-seed:${CONVERGENCE_DOCKER_TAG}
+    image: elscha/convergence-cluster-seed:latest
     command: "-Dlog4j.configurationFile=/etc/convergence/log4j2.xml"
     # restart: always
     volumes:
@@ -38,7 +38,7 @@ services:
   ## server roles.
   ##
   server:
-    image: ${CONVERGENCE_DOCKER_REPO}/convergence-server:${CONVERGENCE_DOCKER_TAG}
+    image: elscha/convergence-server:latest
     # restart: always
     volumes:
        - ./config/convergence/log4j2.xml:/opt/convergence-server/conf/log4j2.xml
